@@ -1,3 +1,4 @@
+import './services/getPriceOnInterval';
 import express from 'express'
 import * as dotenv from 'dotenv'
 import { Router } from 'express';
