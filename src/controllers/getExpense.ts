@@ -11,7 +11,6 @@ router.get('/:address', async (req: Request, res: Response) => {
     const transactions = await fetchTransactions(address);
     const expense = calculateExpense(transactions);
     const price = await fetchPrice();
-  //  await saveTransactions(address, transactions)
     res.json({expense,price});
   } catch (error) {
     res.status(500).json({ error: 'Failed to get expense' });
@@ -25,8 +24,6 @@ const calculateExpense = (transactions: any) =>{
     let totalGasPrice = 0;
 
     for(let i=0; i<transactions.length; i++){
-        console.log(transactions[i].gasUsed);
-        console.log(Number(transactions[i].gasUsed))
         totalGasUsed += Number(transactions[i].gasUsed);
         totalGasPrice += Number(transactions[i].gasPrice);
     }
