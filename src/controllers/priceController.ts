@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.get('/', async (req: Request, res: Response) => {
   try {
-    console.log("HI");
     const price = await fetchPrice();
     res.json(price);
   } catch (error) {
