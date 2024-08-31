@@ -1,0 +1,27 @@
+{
+  "name": "koinx",
+  "version": "1.0.0",
+  "description": "Assignment of KoinX for backend intern",
+  "main": "index.js",
+  "scripts": {
+  "start": "ts-node src/index.ts",
+  "build": "tsc",
+  "start:prod": "node dist/index.js"
+   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
